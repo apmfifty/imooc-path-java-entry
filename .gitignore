@@ -1,0 +1,11 @@
+.idea/
+.DS_Store
+*.bak
+*.pyc
+*.log
+*.csv
+*.zip
+*.xlsx
+*.pkl
+.ipynb_checkpoints/
+.gitignore
