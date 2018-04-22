@@ -1,14 +1,14 @@
 # docs
-.csv
-.doc
-.docx
-.xlsx
-.xls
-.ppt
-.pptx
-.zip
-.rar
-.pkl
+*.csv
+*.doc
+*.docx
+*.xlsx
+*.xls
+*.ppt
+*.pptx
+*.zip
+*.rar
+*.pkl
 
 
 .idea/
