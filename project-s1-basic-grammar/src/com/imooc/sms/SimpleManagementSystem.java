@@ -13,10 +13,17 @@ public class SimpleManagementSystem {
 	public int[] insertData() {
 		//预先定义的变量		
 		int[] arr=new int[10];
+		Scanner scanner=new Scanner(System.in);
 		for(int i=1;i<arr.length;i++) {
 			System.out.println("请输入第"+i+"个数据:");
-			Scanner scanner=new Scanner(System.in);
-			arr[i-1]=scanner.nextInt();
+			int n=scanner.nextInt();
+			if (n==0) {
+				i--;
+				continue;
+			}
+			else {
+				arr[i-1]=n;	
+			}							
 		}
 		showData(arr,arr.length-1);		
 		return arr;
@@ -35,22 +42,28 @@ public class SimpleManagementSystem {
 	public void insertAtArray(int[]a,int val,int pos) {		
 		for(int i=a.length-1;i>pos;i--)			
 		{
-			a[i]=a[i-1];
-			showData(a,a.length);		
+			a[i]=a[i-1];				
 		}
 		a[pos]=val;
 		showData(a,a.length);			
 	}
 	//查询能被3整除的数据
 	public void divThree(int[]a,int length) {
-		System.out.print("数组中能被3整除的元素为：");
+		boolean flag=false;
+		String divString=""; 
 		for(int i=0;i<(length<a.length?length:a.length);i++)
 		{
-			if(a[i]%3==0) {
-				System.out.print(a[i]+" ");
-			}
+			if((a[i]%3==0)&&(a[i]!=0)) {
+				divString+=a[i]+" ";				
+				flag=true;
+			}			
 		}
-		System.out.println();
+		if (flag) {
+			System.out.println("数组中能被3整除的元素为："+divString);
+		}
+		else {
+			System.out.println("数组中没有数据能被3整除");
+		}
 		notice();
 	}
 	// 显示提示信息的方法
@@ -72,10 +85,10 @@ public class SimpleManagementSystem {
 		sms.notice();
 		int[] arr=new int[10];
 		boolean insertFlag=false;
+		Scanner scanner=new Scanner(System.in);
 		while (true) {					
 			// 设置quitFlag判断是否退出循环
-			boolean quitFlag=false;
-			Scanner scanner=new Scanner(System.in);
+			boolean quitFlag=false;			
 			int methodSelection=scanner.nextInt();			
 			switch (methodSelection) {
 			case 0:	

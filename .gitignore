@@ -1,11 +1,60 @@
+# docs
+.csv
+.doc
+.docx
+.xlsx
+.xls
+.ppt
+.pptx
+.zip
+.rar
+.pkl
+
+
 .idea/
 .DS_Store
 *.bak
 *.pyc
 *.log
-*.csv
 *.zip
-*.xlsx
 *.pkl
 .ipynb_checkpoints/
 .gitignore
+/.metadata/
+
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+
+# Operating System Files 
+
+*.DS_Store 
+Thumbs.db 
+*.sw? 
+.#* 
+*# 
+*~ 
+*.sublime-* 
+
+# Build Artifacts 
+
+.gradle/
+build/
+target/
+bin/
+dependency-reduced-pom.xml 
+
+# Eclipse Project Files 
+
+.classpath
+.project
+.settings/ 
+.class
+
+
+# IntelliJ IDEA Files 
+
+*.iml
+*.ipr 
+*.iws 
+*.idea 
+
